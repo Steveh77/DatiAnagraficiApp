@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPeopleActivity">
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_name"
+        android:layout_marginEnd="5dp"
+        android:text="Nome" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@+id/name_label"
+        android:hint="Inserisci il tuo nome"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/surname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_surname"
+        android:layout_marginEnd="5dp"
+        android:text="Cognome" />
+
+    <EditText
+        android:id="@+id/edit_surname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/edit_name"
+        android:layout_toEndOf="@id/surname_label"
+        android:hint="Inserisci il tuo cognome"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/birthday_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_birthday"
+        android:layout_marginEnd="5dp"
+        android:text="Data di nascita" />
+
+    <EditText
+        android:layout_height="48dp"
+        android:id="@+id/edit_birthday"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/edit_surname"
+        android:layout_toEndOf="@id/birthday_label"
+        android:hint="Data di nascita"
+        android:inputType="date" />
+
+
+    <RadioGroup
+        android:id="@+id/gender_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_birthday"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="Sesso" />
+
+        <RadioButton
+            android:id="@+id/gender_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="M" />
+
+        <RadioButton
+            android:id="@+id/gender_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/birthcity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_birthcity"
+        android:layout_marginEnd="5dp"
+        android:text="Città di nascita" />
+
+
+    <EditText
+        android:id="@+id/edit_birthcity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/gender_group"
+        android:layout_toEndOf="@id/birthcity_label"
+        android:hint="Città di nascita"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/Provincia_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_provincia"
+        android:layout_alignBottom="@+id/birthcity_label"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="0dp"
+        android:text="Provincia di " />
+
+    <EditText
+        android:id="@+id/edit_provincia"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/edit_birthcity"
+        android:layout_toEndOf="@id/Provincia_label"
+        android:hint="Provincia di"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/aggiungi_nuova_persona"
+        android:text="AGGIUNGI NUOVA PERSONA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Provincia_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"/>
+
+
+
+</RelativeLayout>
